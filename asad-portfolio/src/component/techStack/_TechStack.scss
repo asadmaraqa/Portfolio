@@ -1,0 +1,30 @@
+@use "../sass/_base";
+
+.techstack {
+ display: grid;
+ grid-area: teckstack;
+ grid-template-columns: 1fr;
+ grid-template-rows: min-content 1fr;
+ justify-items: center;
+ grid-template-areas:
+   "h2 h2 h2"
+   "ul ul ul";
+
+ &__h2 {
+   grid-area: h2;
+   display: flex;
+   justify-content: center;
+ }
+ &__ul {
+   display: grid;
+   grid-template-columns: repeat(4, 0.2fr);
+   justify-content: center;
+   list-style: none;
+   grid-row: ul;
+   grid-gap: 7rem;
+   @include base.bp-devices {
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: repeat(2, 1fr);
+   }
+ }
+}

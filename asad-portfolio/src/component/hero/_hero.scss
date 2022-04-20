@@ -1,0 +1,80 @@
+@use "../sass/_base";
+.hero {
+ grid-area: hero;
+ display: grid;
+ grid-template-columns: 0.5fr 0.4fr;
+ grid-template-rows: 1fr 1fr min-content;
+ gap: 50px;
+ justify-content: center;
+ grid-template-areas:
+   "text pic"
+   "p pic"
+   "arrow arrow";
+   @include base.bp-devices {
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr min-content;
+    grid-template-areas:
+      "pic"
+      "text"
+      "p"
+      "arrow";
+  }
+   &__h1 {
+    grid-area: text;
+    display: flex;
+    align-self: end;
+    font-size: 1.5rem;
+   
+  }
+  &__p {
+    grid-area: p;
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: pic;
+    width: 100%;
+  }
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 50px solid ;
+    display: grid;
+    grid-area: arrow;
+    justify-content: center;
+    margin: auto;
+    animation: arrow-move ease-in-out 3s infinite;
+  }
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}

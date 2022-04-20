@@ -1,0 +1,56 @@
+@use "../sass/_base";
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content 0.5fr;
+  grid-area: services;
+  grid-template-areas:
+    "hs hs hs"
+    "ar ar ar";
+
+  justify-items: center;
+  column-gap: 5rem;
+  row-gap: 2rem;
+  
+
+  @include base.bp-devices {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 0.5fr 1fr 1fr;
+    grid-template-areas:
+    "hs "
+    "ar"
+    "ar"
+    "ar";
+
+  }
+  &__h2 {
+    grid-area: hs;
+  }
+  &__h2 {
+    grid-area: hs;
+  }
+
+  &--ar1 {
+    grid-area: ar1;
+
+  }
+
+  &--ar2 {
+    grid-area: ar2;
+
+  }
+  &--ar3 {
+    grid-area: ar3;
+
+  }
+}
+
+.Card__container{
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+  padding: 10%;
+  display: grid;
+  grid-template-rows: 0.2fr 0.5fr 0.1fr;
+  justify-items: center;
+}

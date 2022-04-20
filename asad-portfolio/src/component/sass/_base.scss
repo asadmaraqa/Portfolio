@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+  padding: 0;
+  margin:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.container{
+  justify-content: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 90vw;
+  grid-template-rows: 10vh 80vh 0.3fr 0.1fr 0.5fr min-content;
+  grid-template-areas:
+    "nav"
+    "hero"
+    "services"
+    "teckstack"
+    "blogs"
+    "form"
+    "footer";
+  gap: 3rem;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(235, 235, 235);
+}
+.containers{
+
+  max-width: 95%;
+  margin:auto;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+li{
+  list-style: none;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+button{
+  border:none;
+  outline:none;
+  background-color:none;
+}
+
+@mixin bp-devices {
+ @media (max-width: 750px) {
+   @content;
+ }
+}
