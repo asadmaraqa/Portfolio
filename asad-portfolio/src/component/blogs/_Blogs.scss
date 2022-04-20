@@ -1,0 +1,47 @@
+@use "../sass/base";
+.blogs {
+  grid-area: blogs;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 30px;
+  justify-items: center;
+  justify-content: center;
+
+  &__article {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 0.2fr 1fr 0.6fr;
+    gap: 20px;
+    justify-content: center;
+    grid-template-areas:
+      "b-image h3"
+      "b-image  p"
+      "b-image  btn";
+      @include base.box-style;
+    @include base.bp-devices {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 0.3fr 0.2fr 0.3fr;
+      justify-items: center;
+      grid-template-areas:
+        "b-image"
+        "h3"
+        "p"
+        "btn";
+    }
+  }
+
+  &__image {
+    grid-area: b-image;
+    align-self: center;
+  }
+  &__h3 {
+    grid-area: h3;
+  }
+  &__p {
+    grid-area: p;
+  }
+  &__btn {
+    grid-area: btn;
+  }
+}

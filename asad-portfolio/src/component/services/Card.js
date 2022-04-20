@@ -1,6 +1,5 @@
 import React from 'react'
 import "./_Card.scss"
-
 const Card = ({ title, description,button }) => {
   return (
     <div className={"Card__container"} >

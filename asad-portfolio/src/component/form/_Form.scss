@@ -1,0 +1,33 @@
+@use "../sass/base";
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
+  &__h2 {
+    display: flex;
+    justify-content: center;
+  }
+  &__fieldset {
+    grid-area: form;
+    display: grid;
+    border: 0;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(2, 0.3fr) 1fr 0.5fr;
+    gap: 20px;
+    @include base.box-style;
+    justify-content: center;
+    align-items: center;
+    @include base.bp-devices {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, min-content);
+    }
+  }
+  &__input {
+    height: 2rem;
+    border-radius: 5px;
+  }
+  &__message {
+    border-radius: 5px;
+  }
+}

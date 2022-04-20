@@ -13,7 +13,7 @@ export const dataServices =
       button: "Learn more"
     },
     {
-      id:3 ,
+      id:2 ,
       title: "User interface design",
       description: "I can make you a UI that will satisfy your needs",
       button: "Learn more"
