@@ -9,6 +9,9 @@
     display: flex;
     justify-content: center;
   }
+  &__element{
+    width:80%
+  }
   &__fieldset {
     display: grid;
     border: 0;
