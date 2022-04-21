@@ -11,7 +11,7 @@ const Header = (scrollToSection, services) => {
   return (
 
     <header className="header">
-      <div className='header__logo'>
+      <div className='header__logo' aria-label='Logo for Asad Maraqa portfolio'>
         <img src={logo} className='header__logo__img'></img>
         <span className="header__logo__text">ASAD MARAQA</span>
       </div>

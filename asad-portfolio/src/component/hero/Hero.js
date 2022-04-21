@@ -9,9 +9,10 @@ const hero = () => {
 
     <section className="hero">
       <h1 className="hero__h1 hero__typewriter">Hi, Im Asad Maraqa</h1>
-      <p className="hero__p"> Im a software developer who takes care of the enviroment. im trying to make a change and make
+
+      <p className="hero__p">Im a full stack developer who takes care of the enviroment. im trying to make a change and make
         the world to a better place.
-        sometimes it doesnt look like it. but trust me many things changed and become better since the dark ages.
+        I can offer many things to you starting with UX/UI design and ending with an nice functional website.
       </p>
       <img  src={HeroImage} className='hero__img'/>
     </section>

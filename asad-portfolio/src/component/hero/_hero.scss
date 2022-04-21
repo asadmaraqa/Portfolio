@@ -2,14 +2,14 @@
 .hero {
  grid-area: hero;
  display: grid;
- grid-template-columns: 0.5fr 0.4fr;
- grid-template-rows: 1fr 1fr min-content;
+ grid-template-columns: 0.5fr 0.5fr;
+ grid-template-rows: 0.5fr 1fr ;
  gap: 50px;
+ align-items: center;
  justify-content: center;
  grid-template-areas:
    "text_h1 pic"
-   "p pic"
-   "arrow arrow";
+   "p pic";
    @include base.bp-devices {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
@@ -17,7 +17,7 @@
       "pic"
       "text_h1"
       "p";
-      justify-items: center;
+    justify-items: center;
   }
    &__h1 {
     grid-area: text_h1;
@@ -37,27 +37,16 @@
     justify-content: center;
     align-items: center;
     grid-area: pic;
-    width: 100%;
-    @include base.bp-devices {
-      width: 80%;
-    }
-  }
-  .arrow {
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 50px solid ;
-    display: grid;
-    grid-area: arrow;
-    justify-content: center;
     margin: auto;
-    animation: arrow-move ease-in-out 3s infinite;
+    width: 70%;
+    @include base.bp-devices {
+      width: 70%;
+    }
   }
   &__typewriter {
     overflow: hidden;
     border-right: .15em solid orange;
-    white-space: nowrap; 
+    white-space: nowrap;
     margin: 0 auto; 
     letter-spacing: .15em; 
     animation: 

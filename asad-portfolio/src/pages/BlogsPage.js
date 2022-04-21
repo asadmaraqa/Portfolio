@@ -7,7 +7,7 @@ const BlogsPage = () => {
   return (
     <div className='blogs__container'>
       <Header />
-      <section class="hero--allblogs">
+      <section className="hero--allblogs">
         <h1>All the blogs are here</h1>
       </section>
       <Blogs />

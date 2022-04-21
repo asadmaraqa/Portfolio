@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-*{
+
+* {
   padding: 0;
-  margin:0;
-  box-sizing:border-box;
+  margin: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-.home__container{
+
+.home__container {
   justify-content: center;
   margin: auto;
   display: grid;
@@ -25,10 +28,10 @@ html{
     "footer";
   gap: 3rem;
   box-sizing: border-box;
-  
   background-color: rgb(235, 235, 235);
 }
-.blogs__container{
+
+.blogs__container {
   justify-content: center;
   margin: auto;
   display: grid;
@@ -41,32 +44,39 @@ html{
     "footer";
   gap: 3rem;
   box-sizing: border-box;
+  background-color: rgb(235, 235, 235);
 }
-a{
+
+a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
-li{
+
+li {
   list-style: none;
 }
-.uppercase{
+
+.uppercase {
   text-transform: uppercase;
 }
-.capitalize{
+
+.capitalize {
   text-transform: capitalize;
 }
-button{
-  border:none;
-  outline:none;
-  background-color:none;
+
+button {
+  border: none;
+  outline: none;
+  background-color: none;
 }
 
 @mixin bp-devices {
- @media (max-width: 750px) {
-   @content;
- }
+  @media (max-width: 750px) {
+    @content;
+  }
 }
-@mixin box-style{
+
+@mixin box-style {
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }

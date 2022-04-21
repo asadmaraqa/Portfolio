@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../../sass/_main.scss";
-const ButtonMain = ({...props}) => {
+const ButtonMain = ({id}) => {
   return (
-    <button aria-labelledby="btn4 4" className="btn blogs__btn" >Read
+    <button aria-labelledby={id} className="btn blogs__btn" >Read
     More</button>
   )
 }

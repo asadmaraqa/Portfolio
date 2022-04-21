@@ -8,21 +8,21 @@ import Blogs from "../component/blogs/Blogs"
 import Form from '../component/form/Form'
 import Footer from '../component/footer/Footer'
 const Home = () => {
- const services=useRef(null); 
- const scrollToSection=(elementRef)=>{
-  window.scrollTo({
-   top:elementRef
-  })
- }
+  const services = useRef(null);
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef
+    })
+  }
   return (
     <div className='home__container'>
-      <Header scrollToSection services/>
-      <Hero/>
-      <Services/>
-      <TechStack/>
-      <Blogs/>
-      <Form/>
-      <Footer/>
+      <Header scrollToSection services />
+      <Hero />
+      <Services />
+      <TechStack />
+      <Blogs />
+      <Form />
+      <Footer />
     </div>
   )
 }

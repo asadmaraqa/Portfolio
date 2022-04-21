@@ -4,7 +4,7 @@ import { BlogsData } from "./BlogsData"
 import BlogCard from './BlogCard'
 const Blogs = () => {
   return (
-    <section class="blogs" id="blogs">
+    <section className="blogs" id="blogs">
       <h2>Blogs</h2>
       {BlogsData.map((blog) =>
        <BlogCard key={blog.id} {...blog}/>
