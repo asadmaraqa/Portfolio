@@ -36,6 +36,10 @@
   &__image {
     grid-area: b-image;
     align-self: center;
+    width: 100%;
+    @include base.bp-devices {
+      width:70%;
+    }
   }
   &__h3 {
     grid-area: h3;
@@ -46,4 +50,14 @@
   &__btn {
     grid-area: btn;
   }
+}
+.blog__article{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+        "b-image"
+        "h3"
+        "p";
+  justify-items: center;
 }

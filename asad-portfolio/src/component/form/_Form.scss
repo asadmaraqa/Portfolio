@@ -4,12 +4,12 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
   justify-items: center;
+  grid-area: form;
   &__h2 {
     display: flex;
     justify-content: center;
   }
   &__fieldset {
-    grid-area: form;
     display: grid;
     border: 0;
     grid-template-columns: repeat(2, min-content);

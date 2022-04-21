@@ -3,7 +3,7 @@
 .nav {
  display: flex;
  justify-content: center;
- grid-area: menu;
+
  z-index: 1;
  width: 60%;
  @include base.bp-devices {

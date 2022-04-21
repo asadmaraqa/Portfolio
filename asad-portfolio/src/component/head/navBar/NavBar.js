@@ -29,7 +29,7 @@ export default function Navbar() {
       {(toggleMenu || screenWidth > 750) && (
         <ul className="nav__list">
           <li className="nav__items"><Link to="/">Home</Link></li>
-          <li className="nav__items"><Link to="/blog">Blogs</Link></li>
+          <li className="nav__items"><Link to="/blogs">Blogs</Link></li>
           <li className="nav__items"><a href="/" onClick={e => {scrollHandler(e,"services")}}>Services</a></li>
           <li className="nav__items"><a href="/" onClick={e => {scrollHandler(e,"blogs")}}>Blogs</a></li>
           <li className="nav__items"><a href="/" onClick={e => {scrollHandler(e,"letsTalk")}}>Lets talk</a></li>

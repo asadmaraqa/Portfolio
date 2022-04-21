@@ -5,12 +5,11 @@ const Footer = () => {
     <footer class="footer">
       <p>All copyright reserved to Asad</p>
       <ul class="footer__ul">
-        <li><a href="https://www.facebook.com/">
-          <img src="../assets/images/facebook.jpeg" alt="Follow me on facebook"
-            width="50px" /></a></li>
+        <li ><a href="https://www.facebook.com/">
+        <i class="fa fa-facebook fa-2x" ></i></a></li>
         <li><a href="https://github.com/">
-          <img src="../assets/images/github.jpeg" alt="Follow me on github"
-            width="50px" /></a>
+        <i class="fa fa-github fa-2x"></i>
+        </a>
         </li>
       </ul>
     </footer>

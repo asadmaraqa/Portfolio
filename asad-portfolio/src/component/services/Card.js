@@ -1,11 +1,12 @@
 import React from 'react'
 import "../../sass/_main.scss"
+import ButtonMain from '../buttonMain/ButtonMain'
 const Card = ({ title, description,button }) => {
   return (
     <div className={"Card__container"} >
       <h3>{title}</h3>
       <p>{description}</p>
-      <button>{button}</button>
+      <ButtonMain>{button}</ButtonMain>
     </div>
   )
 }

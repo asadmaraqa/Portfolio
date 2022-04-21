@@ -18,7 +18,7 @@ const Home = () => {
     <div className='home__container'>
       <Header scrollToSection services/>
       <Hero/>
-      < div ref={services}><Services/></div>
+      <Services/>
       <TechStack/>
       <Blogs/>
       <Form/>

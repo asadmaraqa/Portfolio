@@ -3,6 +3,7 @@
   display: flex;
   grid-template-areas: "logo menu";
   justify-content: space-between;
+  grid-area: header-main;
   background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
   padding: 20px;
   border-radius: 50px;

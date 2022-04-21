@@ -32,7 +32,7 @@
 .Card__container{
   @include base.box-style;
   padding: 10%;
-  display: grid;
-  grid-template-rows: 0.2fr 0.5fr 0.1fr;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
