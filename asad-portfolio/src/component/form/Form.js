@@ -1,9 +1,9 @@
 import React from 'react'
-import "./_Form.scss"
+import "../../sass/_main.scss"
 const Form = () => {
   return (
    
-   <section class="form">
+   <section class="form" id="letsTalk">
    <h2 class="form__h2">Contact me</h2>
    <form>
      <fieldset class="form__fieldset">

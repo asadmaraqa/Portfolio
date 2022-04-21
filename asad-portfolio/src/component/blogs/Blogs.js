@@ -1,10 +1,10 @@
 import React from 'react'
-import "./_Blogs.scss"
+import "../../sass/_main.scss"
 import { BlogsData } from "./BlogsData"
 import BlogCard from './BlogCard'
 const Blogs = () => {
   return (
-    <section class="blogs">
+    <section class="blogs" id="blogs">
       <h2>Blogs</h2>
       {BlogsData.map((blog) =>
        <BlogCard key={blog.id} {...blog}/>

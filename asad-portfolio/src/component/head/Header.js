@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import "./_Header.scss";
+import "../../sass/_main.scss";
 import logo from "../../assets/logo.jpeg"
 import Navbar from './navBar/NavBar';
-const Header = () => {
+const Header = (scrollToSection ,services) => {
   window.addEventListener("scroll",function(){
     const header = document.querySelector(".header")
     header.classList.toggle("active", window.scrollY>100)
@@ -15,7 +15,7 @@ const Header = () => {
    <img src={logo} className='header__logo__img'></img>
    <a href="../index.html"><span className="header__logo__text">ASAD MARAQA</span></a>
  </div>
-    <Navbar/>
+    <Navbar scrollToSection services/>
   </header>
 
 

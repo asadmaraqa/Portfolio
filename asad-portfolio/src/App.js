@@ -1,23 +1,17 @@
 import React from 'react'
-import Header from './component/head/Header'
-import "./App.scss"
-import Hero from './component/hero/Hero'
-import Services from './component/services/Services'
-import TechStack from './component/techStack/TechStack'
-import Blogs from "./component/blogs/Blogs"
-import Form from './component/form/Form'
-import Footer from './component/footer/Footer'
+import BlogsPage from './pages/BlogsPage'
+import Home from './pages/Home'
+import { Routes, Route, Link } from "react-router-dom";
+
 const App = () => {
   return (
-    <div className='container'>
-      <Header/>
-      <Hero/>
-      <Services/>
-      <TechStack/>
-      <Blogs/>
-      <Form/>
-      <Footer/>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="blog" element={<BlogsPage />} />
+      </Routes>
+      
+      </>
   )
 }
 

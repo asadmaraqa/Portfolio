@@ -1,5 +1,5 @@
 import React from 'react'
-import "./_Card.scss"
+import "../../sass/_main.scss"
 const Card = ({ title, description,button }) => {
   return (
     <div className={"Card__container"} >
