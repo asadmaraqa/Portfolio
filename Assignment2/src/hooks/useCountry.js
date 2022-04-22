@@ -5,10 +5,19 @@ const useCountry = (name) => {
   const [error, setError] = useState(null);
   const baseUrl = `https://restcountries.com/v3.1/name/${name}`;
         useEffect(() => {
-            fetch(baseUrl)
-            .then((res) => res.json())
-            .then((data) => setData(data))
-            .catch((err) => setError(err));
+          const fetchData=async()=> {
+            try {
+             const req=await fetch(baseUrl);
+             if (!req.ok){
+              throw new Error("not found");
+             }
+             const res=await req.json();
+             setData(res);
+            }catch (error){
+             setError(error.message);
+            }
+           };
+           fetchData();
         }, [baseUrl]);
         return [error,data];
   };
