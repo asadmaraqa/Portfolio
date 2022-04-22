@@ -1,16 +1,18 @@
 @use "../../sass/_base";
+
 .hero {
- grid-area: hero;
- display: grid;
- grid-template-columns: 0.5fr 0.5fr;
- grid-template-rows: 0.5fr 1fr ;
- gap: 50px;
- align-items: center;
- justify-content: center;
- grid-template-areas:
-   "text_h1 pic"
-   "p pic";
-   @include base.bp-devices {
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas:
+    "text_h1 pic"
+    "p pic";
+
+  @include base.bp-devices {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
     grid-template-areas:
@@ -19,19 +21,22 @@
       "p";
     justify-items: center;
   }
-   &__h1 {
+
+  &__h1 {
     grid-area: text_h1;
     display: flex;
     align-self: end;
     font-size: 1.5rem;
-   
+
   }
+
   &__p {
     grid-area: p;
     display: flex;
     justify-content: center;
     font-weight: bold;
   }
+
   &__img {
     display: flex;
     justify-content: center;
@@ -39,29 +44,43 @@
     grid-area: pic;
     margin: auto;
     width: 70%;
+
     @include base.bp-devices {
       width: 70%;
     }
   }
+
   &__typewriter {
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
-    margin: 0 auto; 
-    letter-spacing: .15em; 
-    animation: 
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
       typing 3.5s steps(30, end),
       blink-caret .5s step-end infinite;
   }
+
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+      width: 0
+    }
+
+    to {
+      width: 100%
+    }
   }
+
   @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
+
+    from,
+    to {
+      border-color: transparent
+    }
+
+    50% {
+      border-color: orange
+    }
   }
 
 }
-
-
