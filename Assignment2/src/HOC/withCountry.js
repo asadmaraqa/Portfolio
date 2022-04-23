@@ -1,11 +1,11 @@
 
-import {React, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-const withCountry = (Component, name) => {
-  const withCountry = (props) => {
+const WithCountry = (WrapperComponent, nameOfCountry) => {
+  const WithCountry = (props) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
-    const baseUrl = `https://restcountries.com/v3.1/name/${name}`;
+    const baseUrl = `https://restcountries.com/v3.1/name/${nameOfCountry}`;
 
     useEffect(() => {
       const fetchData = async () => {
@@ -21,10 +21,10 @@ const withCountry = (Component, name) => {
         }
       }
       fetchData();
-    }, []);
-    return <Component {...props} data={data} error={error}  />;
+    }, [nameOfCountry]);
+    return <WrapperComponent error={error} data={data} {...props} />;
 
   };
-  return withCountry;
+  return WithCountry;
 }; 
-export default withCountry;
+export default WithCountry;

@@ -1,25 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
 import withCountry from "../HOC/withCountry";
-import PropTypes from "prop-types"
-const Hoc = ({ country ,error}) => {
- let data;
- if(data){
-  data=country.map((countryName)=>{
-   return countryName.name.common
-  });
- }
+
+const Hoc = ({ error,data }) => {
+  if (data) {
+    data = data.map((countryName) => {
+      return countryName.name.common
+    });
+  }
   if (error) {
-    data=error.message;
+    data = error.message;
   }
 
   return (
     <div>
-     {data}
+      {data}
     </div>
   );
 };
-Hoc.prototype={
- data:PropTypes.array,
- error:PropTypes.object
+Hoc.prototype = {
+  data: PropTypes.array,
+  error: PropTypes.object
 }
-export default withCountry(Hoc,"finland");
+export default withCountry(Hoc, "suomi");
