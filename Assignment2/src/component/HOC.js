@@ -1,7 +1,7 @@
 import React from "react";
 import withCountry from "../HOC/withCountry";
 import PropTypes from "prop-types"
-const Hoc = ({ error, country }) => {
+const Hoc = ({ country ,error}) => {
  let data;
  if(data){
   data=country.map((countryName)=>{

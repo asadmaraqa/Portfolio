@@ -1,13 +1,18 @@
-import React, { useRef } from 'react'
-import Header from '../component/head/Header'
-import "../sass/_main.scss"
-import Hero from '../component/hero/Hero'
-import Services from '../component/services/Services'
-import TechStack from '../component/techStack/TechStack'
-import Blogs from "../component/blogs/Blogs"
-import Form from '../component/form/Form'
-import Footer from '../component/footer/Footer'
+import React, { useRef } from 'react';
+import Header from '../component/header';
+import Hero from '../component/hero';
+import Services from '../component/services';
+import TechStack from '../component/techStack';
+import Blogs from "../component/blogs";
+import Form from '../component/form';
+import Footer from '../component/footer';
+import { BlogsData } from "../mockData/BlogsData";
+import {ServicesData} from "../mockData/ServicesData";
+
+import "../sass/_main.scss";
+
 const Home = () => {
+
   const services = useRef(null);
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -18,9 +23,9 @@ const Home = () => {
     <div className='home__container'>
       <Header scrollToSection services />
       <Hero />
-      <Services />
+      <Services servicesData={ServicesData}/>
       <TechStack />
-      <Blogs />
+      <Blogs blogsData={BlogsData} />
       <Form />
       <Footer />
     </div>

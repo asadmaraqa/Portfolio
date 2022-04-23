@@ -1,4 +1,4 @@
-export const dataServices =
+export const ServicesData =
   [
     {
       id: 0,

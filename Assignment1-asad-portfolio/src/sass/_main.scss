@@ -1,6 +1,6 @@
 @use "./base";
-@use "../pages/Blogspages";
-@use "../component/head/Header";
+@use "../pages/blogsPage/Blogspages";
+@use "../component/header/Header";
 @use "../component/hero/hero";
 @use "../component/services/Card";
 @use "../component/techStack/TechStack";

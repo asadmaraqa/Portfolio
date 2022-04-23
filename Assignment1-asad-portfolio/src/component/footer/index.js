@@ -1,5 +1,6 @@
-import React from 'react'
-import "../../sass/_main.scss"
+import React from 'react';
+import "../../sass/_main.scss";
+
 const Footer = () => {
   return (
     <footer className="footer">

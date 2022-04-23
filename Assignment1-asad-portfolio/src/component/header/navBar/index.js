@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import './_NavBar.scss'
-import logo from "../../../assets/logo.jpeg"
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import * as Scroll from 'react-scroll';
+
+import './_NavBar.scss';
 
 export default function Navbar() {
+  const path = window.location.pathname;
+  const condition=path==("/blogs" || "/blog");
   const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const toggleNav = () => {
@@ -20,18 +23,18 @@ export default function Navbar() {
       window.removeEventListener('resize', changeWidth)
     }
   }, [])
-  const scrollHandler =(e,sectionName)=>{ let section = document.getElementById(sectionName);
-  e.preventDefault();
-  section && section.scrollIntoView({ behavior: "smooth", block: "start" });
-  window.history.pushState(sectionName, sectionName, "/"+sectionName);}
+
   return (
+
     <nav className='nav'>
       {(toggleMenu || screenWidth > 750) && (
         <ul className="nav__list">
           <li className="nav__items"><Link to="/">Home</Link></li>
           <li className="nav__items"><Link to="/blogs">Blogs</Link></li>
-          <li className="nav__items"><a onClick={e => {scrollHandler(e,"services")}}>Services</a></li>
-          <li className="nav__items"><a onClick={e => {scrollHandler(e,"letsTalk")}}>Lets talk</a></li>
+          <li className="nav__items">
+            {condition ? <Link to="/">Services</Link> : <Scroll.Link to="services" spy={true} smooth={true} offset={50} duration={500}>Services</Scroll.Link>}</li>
+          <li className="nav__items">
+            {condition ? <Link to="/">Lets talk</Link> : <Scroll.Link to="letsTalk" spy={true} smooth={true} offset={50} duration={500}>Lets talk</Scroll.Link>}</li>
         </ul>
       )}
       <i className='fas fa-bars fa-2x nav__icon' aria-hidden="true" onClick={toggleNav} />
