@@ -1,9 +1,8 @@
 import React from 'react';
-import HeroImage from "../../assets/asad.png";
 
-import "./_hero.scss"
+import "../../sass/_main.scss"
 
-const hero = () => {
+const hero:React.FC = () => {
   return (
 
     <section className="hero">
@@ -12,7 +11,7 @@ const hero = () => {
         the world to a better place.
         I can offer many things to you starting with UX/UI design and ending with an nice functional website.
       </p>
-      <img src={HeroImage} className='hero__img' />
+      <img src={require("../../assets/asad.png")} className='hero__img' />
     </section>
 
   )

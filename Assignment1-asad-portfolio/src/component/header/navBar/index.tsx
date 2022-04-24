@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import "../../../sass/_main.scss";
+
 import * as Scroll from 'react-scroll';
 
-import './_NavBar.scss';
-
-export default function Navbar() {
+const Navbar:React.FC = () => {
   const path = window.location.pathname;
   const condition=path==("/blogs" || "/blog");
   const [toggleMenu, setToggleMenu] = useState(false)
@@ -12,12 +12,10 @@ export default function Navbar() {
   const toggleNav = () => {
     setToggleMenu(!toggleMenu)
   }
-
   useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth);
     }
-
     window.addEventListener('resize', changeWidth)
     return () => {
       window.removeEventListener('resize', changeWidth)
@@ -41,3 +39,6 @@ export default function Navbar() {
     </nav>
   )
 }
+
+export default Navbar
+

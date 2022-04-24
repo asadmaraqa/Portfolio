@@ -1,7 +1,7 @@
 import React from 'react';
 import "../../sass/_main.scss";
 
-const Footer = () => {
+const Footer:React.FC = () => {
   return (
     <footer className="footer">
       <p>All copyright reserved to Asad</p>

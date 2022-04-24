@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-const useCountry = (name) => {
+const useCountry = (nameOfCountry) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-  const baseUrl = `https://restcountries.com/v3.1/name/${name}`;
+  const baseUrl = `https://restcountries.com/v3.1/name/${nameOfCountry}`;
   useEffect(() => {
     const fetchData = async () => {
       try {

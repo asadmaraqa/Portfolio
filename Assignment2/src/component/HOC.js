@@ -8,18 +8,15 @@ const Hoc = ({ error,data }) => {
       return countryName.name.common
     });
   }
-  if (error) {
-    data = error.message;
-  }
 
   return (
     <div>
-      {data}
+      {error ? <div>{error}</div> : <div>{data}</div>}
     </div>
   );
 };
 Hoc.prototype = {
-  data: PropTypes.array,
+  data: PropTypes.object,
   error: PropTypes.object
 }
-export default withCountry(Hoc, "suomi");
+export default withCountry(Hoc, "suomi"); 

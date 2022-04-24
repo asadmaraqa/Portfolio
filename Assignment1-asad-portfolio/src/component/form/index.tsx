@@ -1,9 +1,10 @@
 import React from 'react';
 import Input from './Input';
+import HTMLAttributes from "../../custom";
 
 import "../../sass/_main.scss";
 
-const Form = () => {
+const Form:React.FC = () => {
   return (
 
     <section className="form" id="letsTalk" name="letsTalk">
@@ -12,7 +13,7 @@ const Form = () => {
         <fieldset className="form__fieldset">
           <Input InputName={"fname"} placeHolder={"First name"} condition={true} className="form__input"/>
           <Input InputName={"lname"} placeHolder={"second name"} condition={true} className="form__input" />
-          <Input InputName={"Message"} placeHolder={"Message"} condition={false}  className="form__message" cols={"30"} rows={"10"} />
+          <Input InputName={"Message"} placeHolder={"Message"} condition={false}  className="form__message" cols={30} rows={10} />
           <input type="submit" value="Submit" className="btn" />
         </fieldset>
       </form>

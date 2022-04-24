@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./_TechStack.scss";
 
-const TechStack = () => {
+const TechStack:React.FC = () => {
   return (
     <section className="techstack">
       <h2 className="techstack__h2">Tech stack</h2>

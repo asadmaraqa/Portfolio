@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import BlogPage from './pages/blogPage/BlogPage';
 import BlogsPage from './pages/blogsPage/BlogsPage';
 
-const App = () => {
+const App:React.FC = () => {
   return (
     <>
       <Routes>

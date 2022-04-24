@@ -6,7 +6,7 @@ import { BlogsData } from "../../mockData/BlogsData";
 
 import "../../sass/_main.scss";
 
-const BlogsPage = () => {
+const BlogsPage:React.FC = () => {
 
   return (
     <div className='blogs__container'>

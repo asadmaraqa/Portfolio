@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 const WithCountry = (WrapperComponent, nameOfCountry) => {
@@ -27,4 +26,4 @@ const WithCountry = (WrapperComponent, nameOfCountry) => {
   };
   return WithCountry;
 }; 
-export default WithCountry;
+export default WithCountry; 
