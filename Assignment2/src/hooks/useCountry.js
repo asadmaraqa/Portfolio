@@ -1,13 +1,13 @@
-//still underwork never mind for now
+/*import React, { useEffect, useState } from "react";
 
-import React, { useEffect, useState } from "react";
-export interface state {
-  data: string[],
-  error:object,
-}
-const useCountry= <state> (nameOfCountry:string) => {
-  const [data, setData] = useState<any | null>(null);
-  const [error, setError] = useState<any | null>(null);
+type resultProps = {
+  name: object;
+  commmon: string;
+};
+const useCountry= (nameOfCountry:string) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  console.log(error)
   const baseUrl = `https://restcountries.com/v3.1/name/${nameOfCountry}`;
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +17,7 @@ const useCountry= <state> (nameOfCountry:string) => {
           throw new Error("not found");
         }
         const res = await req.json();
-        setData(res);
+        setData(res[0]);
       } catch (error) {
         setError(error);
       }
@@ -27,4 +27,4 @@ const useCountry= <state> (nameOfCountry:string) => {
   return [error, data];
 };
 
-export default useCountry;
+export default useCountry;*/
