@@ -1,5 +1,4 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
 
 import { BlogsData } from "../../mockData/BlogsData";
 import BlogCard from '../../component/blogs/BlogCard';
