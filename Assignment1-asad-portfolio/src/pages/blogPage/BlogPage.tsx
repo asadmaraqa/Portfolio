@@ -1,19 +1,23 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
+
 import { BlogsData } from "../../mockData/BlogsData";
 import BlogCard from '../../component/blogs/BlogCard';
 import Footer from '../../component/footer';
 import Header from '../../component/header';
 
-const BlogPage = () => {
-  let { id } = useParams();
+const pathArray = window.location.pathname.split('/');
+const urlId:any = pathArray[2];
+const BlogPage:React.FC = () => {
+ 
+console.log(typeof urlId)
   return (
     <div className='blogs__container'>
       <Header />
       <section className="blogs__allblogs">
-        <h1>{BlogsData[id].title}</h1>
+        <h1>{BlogsData[urlId].title}</h1>
       </section>
-      <BlogCard id={id} tilte={BlogsData[id].title} description={BlogsData[id].description} picture={BlogsData[id].picture} alt={BlogsData[id].alt} show={false} />
+      <BlogCard id={urlId} title={BlogsData[Number(urlId)].title} description={BlogsData[Number(urlId)].description} picture={BlogsData[Number(urlId)].picture} alt={BlogsData[Number(urlId)].alt} />
       <Footer />
     </div>
   )

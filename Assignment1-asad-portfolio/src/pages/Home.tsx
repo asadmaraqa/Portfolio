@@ -7,7 +7,7 @@ import Blogs from "../component/blogs";
 import Form from '../component/form';
 import Footer from '../component/footer';
 import { BlogsData } from "../mockData/BlogsData";
-import { ServicesData } from "../mockData/ServicesData";
+import {ServicesData} from "../mockData/ServicesData";
 
 import "../sass/_main.scss";
 

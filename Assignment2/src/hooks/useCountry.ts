@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-
-const useCountry = (nameOfCountry) => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+export interface state {
+  data: string[],
+  error:object,
+}
+const useCountry= <state> (nameOfCountry:string) => {
+  const [data, setData] = useState<any | null>(null);
+  const [error, setError] = useState<any | null>(null);
   const baseUrl = `https://restcountries.com/v3.1/name/${nameOfCountry}`;
   useEffect(() => {
     const fetchData = async () => {
@@ -15,14 +17,12 @@ const useCountry = (nameOfCountry) => {
         const res = await req.json();
         setData(res);
       } catch (error) {
-        setError(error.message);
+        setError(error);
       }
     };
     fetchData();
   }, [baseUrl]);
   return [error, data];
 };
-useCountry.prototype = {
-  name: PropTypes.string,
-}
+
 export default useCountry;
