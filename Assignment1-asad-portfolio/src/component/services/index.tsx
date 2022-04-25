@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-interface servicesData{
+type servicesData={
   servicesData:{
     idServices:string,
     titleServices:string,
@@ -9,7 +9,6 @@ interface servicesData{
     buttonServices:string,
     }[]
 }
-
 
 const Services:React.FC<servicesData> = (props) => {
   return (

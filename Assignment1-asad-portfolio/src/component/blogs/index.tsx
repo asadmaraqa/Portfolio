@@ -1,11 +1,9 @@
 import React from 'react';
-
 import BlogCard from './BlogCard';
-
 
 import "../../sass/_main.scss";
 
-interface blogsData{
+type blogsData={
   blogsData:{
     id:string,
     title:string,
@@ -17,7 +15,6 @@ interface blogsData{
 
 
 const Blogs:React.FC<blogsData> = (props) => {
-  console.log(props.blogsData)
   return (
     <section className="blogs" id="blogs">
       <h2>Blogs</h2>

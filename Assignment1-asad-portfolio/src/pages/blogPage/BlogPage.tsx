@@ -9,7 +9,6 @@ const pathArray = window.location.pathname.split('/');
 const urlId:any = pathArray[2];
 const BlogPage:React.FC = () => {
  
-console.log(typeof urlId)
   return (
     <div className='blogs__container'>
       <Header />

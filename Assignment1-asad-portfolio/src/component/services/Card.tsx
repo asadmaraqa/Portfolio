@@ -3,7 +3,7 @@ import ButtonMain from '../buttonMain/ButtonMain';
 
 import "../../sass/_main.scss";
 
-interface servicesData{
+type servicesData={
     idServices:string,
     titleServices:string,
     descriptionServices:string,

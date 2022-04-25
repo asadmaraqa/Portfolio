@@ -4,7 +4,7 @@ import ButtonMain from '../buttonMain/ButtonMain';
 
 import "../../sass/_main.scss";
 
-interface blogData{
+type blogData={
     id:string,
     title:string,
     description:string,

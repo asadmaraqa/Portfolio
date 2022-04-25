@@ -2,7 +2,7 @@ import React from 'react';
 
 import "../../sass/_main.scss";
 
-interface formData{
+type formData={
   InputName:string,
   placeHolder:string,
   condition:boolean,
