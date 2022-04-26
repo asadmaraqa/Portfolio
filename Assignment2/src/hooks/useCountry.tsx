@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 const useCountry =  (nameOfCountry:string) => {
-  const [data, setData] = useState<any[]>([]);
-  const [error, setError] = useState< any | null>(null);
+  const [data, setData] = useState<string[] | null>([]);
+  const [errorData, setErrorData] = useState<Error | null>(null);
   const baseUrl = `https://restcountries.com/v3.1/name/${nameOfCountry}`;
 
   useEffect(() => {
@@ -14,13 +14,13 @@ const useCountry =  (nameOfCountry:string) => {
         }
         const res = await req.json();
         setData(res);
-      } catch (error) {
-        setError(error)
+      } catch (err) {
+        setErrorData(err as Error)
       }
     }
     fetchData();
   }, [baseUrl]);
-  return [error, data];
+  return {errorData, data};
 };
 
 export default useCountry;

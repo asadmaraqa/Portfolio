@@ -4,14 +4,14 @@ import withCountry from "../HOC/withCountry";
 
 type PropsHoc = {
   data: string[] 
-  error: any[] | null
+  setErrorData: Error | null
 
 }
-const Hoc = ({ data, error }: PropsHoc) => {
+const Hoc = ({ data, setErrorData }: PropsHoc) => {
 
   return (
     <div>
-      {error ? <h1>{error}</h1>: data.map((countryName: any) => {
+      {setErrorData ? <h1>{setErrorData.message}</h1>: data.map((countryName: any) => {
         return <h1 key={countryName.name.common}>{countryName.name.common}</h1>
       })}
     </div>
