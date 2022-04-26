@@ -1,7 +1,7 @@
 import React from 'react';
+
 import Input from './Input';
 import HTMLAttributes from "../../custom";
-
 import "../../sass/_main.scss";
 
 const Form:React.FC = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
+
 import Blogs from '../../component/blogs';
 import Footer from '../../component/footer';
 import Header from '../../component/header';
 import { BlogsData } from "../../mockData/BlogsData";
-
 import "../../sass/_main.scss";
 
 const BlogsPage:React.FC = () => {

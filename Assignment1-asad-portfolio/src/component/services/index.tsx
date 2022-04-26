@@ -1,20 +1,21 @@
 import React from 'react';
+
 import Card from './Card';
 
-type servicesData={
+type servicesDataPropType={
   servicesData:{
-    idServices:string,
-    titleServices:string,
-    descriptionServices:string,
-    buttonServices:string,
+    id:string,
+    title:string,
+    description:string,
+    button:string,
     }[]
 }
 
-const Services:React.FC<servicesData> = (props) => {
+const Services:React.FC<servicesDataPropType> = (props) => {
   return (
     <section name="services" className='services' id="services" >
       <h2 className='services__h2'>Services</h2>
-      {props.servicesData.map((dataCard)=>  <Card key={dataCard.idServices} {...dataCard} />)}
+      {props.servicesData.map((dataCard)=>  <Card key={dataCard.id} {...dataCard} />)}
     </section>
   )
 }

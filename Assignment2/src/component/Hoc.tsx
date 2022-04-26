@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import withCountry from "../HOC/withCountry";
 
 type PropsHoc = {
-  data: any[]
+  data: string[] 
   error: any[] | null
 
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Header from '../component/header';
 import Hero from '../component/hero';
 import Services from '../component/services';
@@ -8,7 +9,6 @@ import Form from '../component/form';
 import Footer from '../component/footer';
 import { BlogsData } from "../mockData/BlogsData";
 import {ServicesData} from "../mockData/ServicesData";
-
 import "../sass/_main.scss";
 
 const Home:React.FC = () => {

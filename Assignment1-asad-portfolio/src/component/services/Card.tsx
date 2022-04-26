@@ -3,19 +3,18 @@ import ButtonMain from '../buttonMain/ButtonMain';
 
 import "../../sass/_main.scss";
 
-type servicesData={
-    idServices:string,
-    titleServices:string,
-    descriptionServices:string,
-    buttonServices:string,
+type servicesDataPropType={
+    id:string,
+    title:string,
+    description:string,
 }
 
-const Card:React.FC<servicesData> = (propsServices) => {
+const Card:React.FC<servicesDataPropType> = ({id,title,description}) => {
   return (
     <div className={"card__container"} >
-      <h3>{propsServices.titleServices}</h3>
-      <p>{propsServices.descriptionServices}</p>
-      <ButtonMain id={propsServices.idServices}/>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ButtonMain id={id}/>
     </div>
   )
 }

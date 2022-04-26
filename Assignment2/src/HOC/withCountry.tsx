@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const WithCountry = <Props,> (WrapperComponent:React.ComponentType<Props>, nameOfCountry:string) => {
   const WithCountry = (props:Props)=> {
     const [data, setData] = useState<Props[]>([]);
-    const [error, setError] = useState<Error | null>(null);
+    const [error, setError] = useState<any | null>(null);
     const baseUrl = `https://restcountries.com/v3.1/name/${nameOfCountry}`;
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const WithCountry = <Props,> (WrapperComponent:React.ComponentType<Props>, nameO
           }
           const res = await req.json();
           setData(res);
-        } catch (error:any) {
+        } catch (error) {
           setError(error);
         }
       }
