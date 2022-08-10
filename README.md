@@ -9,3 +9,4 @@ I leanred in this project, how to write code in TypeScript, I dived deeper into 
 - React
 - SASS
 
+Latest version is deployed at https://enchanting-bunny-8b3f53.netlify.app
