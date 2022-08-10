@@ -3,19 +3,19 @@ export const ServicesData =
     {
       id: "0",
       title: "Front-end developer",
-      description: "Im a front-end developer. I can build you a website that looks like exactly as it was designed",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
       button: "Learn more"
     },
     {
       id: "1",
       title: "Back-end developer",
-      description: "Im a back-end developer. I can build you a website that fucntion as you imagiend ",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled ",
       button: "Learn more"
     },
     {
       id:"2" ,
       title: "User interface design",
-      description: "I can make you a UI that will satisfy your needs",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
       button: "Learn more"
     }
   ];
